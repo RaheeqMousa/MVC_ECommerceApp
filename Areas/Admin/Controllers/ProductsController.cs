@@ -66,7 +66,7 @@ namespace eCommerceProject.Areas.Admin.Controllers
 
 
         [HttpGet]
-        public IActionResult Create() {
+        public IActionResult Create(int id) {
             ViewBag.Categories = context.Categories.ToList();
             ViewBag.Companies = context.Companies.ToList();
             return View();

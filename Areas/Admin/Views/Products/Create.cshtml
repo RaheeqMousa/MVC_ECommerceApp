@@ -29,9 +29,23 @@ Create
 
 
         <div class="mb-3">
+            <label asp-for="Rate" class="form-label"></label>
+            <input asp-for="Rate" type="number" min="0" step="0.01" class="form-control" />
+            <span asp-validation-for="Rate" class="text-danger"></span>
+        </div>
+
+
+        <div class="mb-3">
+            <label asp-for="Discount" class="form-label"></label>
+            <input asp-for="Discount" type="number" min="0" max="1" step="0.01" class="form-control" />
+            <span asp-validation-for="Discount" class="text-danger"></span>
+        </div>
+
+
+        <div class="mb-3">
             <label for="image" class="form-label"></label>
             <input id="image" name="image" type="file" class="form-control" />
-        
+            <span asp-validation-for="Image" class="text-danger"></span>
         </div>
 
         <div class="mb-3">

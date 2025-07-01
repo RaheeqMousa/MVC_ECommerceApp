@@ -15,7 +15,7 @@ namespace eCommerceProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult Create(int id)
         {
             return View();
         }

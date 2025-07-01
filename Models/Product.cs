@@ -19,6 +19,7 @@ namespace eCommerceProject.Models
         [Range(0,5)]
         public decimal Rate { get; set; }
         public decimal Discount { get; set; }
+
         public string? Image { get; set; }  
 
         public int CategoryId { get; set; }
