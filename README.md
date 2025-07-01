@@ -8,6 +8,7 @@
 - Upload product images
 - Manage categories and companies
 - Server-side and client-side validation
+- Friendly admin interface
 
 
 ## What is MVC?
