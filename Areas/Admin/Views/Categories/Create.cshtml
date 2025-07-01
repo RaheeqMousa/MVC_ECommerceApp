@@ -1,0 +1,35 @@
+﻿@section heading {
+		Categories
+}
+@section title {
+		Create
+}
+
+
+<div class="card card-primary card-outline mb-4">
+    <form action="/admin/categories/create" method="post">
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="Name" class="form-control" id="name">
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+
+@section script{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+<script href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></script>
+<script>
+    toastr.success('Have fun storming the castle!', 'Miracle Max Says');
+</script>
+
+}
