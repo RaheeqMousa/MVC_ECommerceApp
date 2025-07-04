@@ -32,5 +32,41 @@ namespace eCommerceProject.Areas.Admin.Controllers
             }
             return View();
         }
+
+        public IActionResult Delete(int id)
+        {
+            var company = context.Companies.FirstOrDefault(c => c.Id == id);
+            if (company != null)
+            {
+                context.Companies.Remove(company);
+                context.SaveChanges();
+                TempData["success"] = "Company deleted successfully";
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var company = context.Companies.Find(id);
+
+            return View(company);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Company request)
+        {
+
+            if (ModelState.IsValid)
+            {
+                context.Companies.Update(request);
+                context.SaveChanges();
+                TempData["success"] = "Company Edited successfully";
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
     }
 }

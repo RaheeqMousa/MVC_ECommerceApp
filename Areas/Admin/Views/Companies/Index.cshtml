@@ -20,7 +20,10 @@
             <tr>
                 <td>@item.Id</td>
                 <td>@item.Name</td>
-                <td><a type="button" href="/admin/categories/delete/@item.Id" class="btn btn-outline-danger btn-lg">Delete</a></td>
+                <td>
+                    <a type="button" href="/admin/companies/delete/@item.Id" class="btn btn-outline-danger btn-lg">Delete</a>
+                    <a type="button" href="/admin/companies/edit/@item.Id" class="btn btn-outline-primary btn-lg">Edit</a>
+                </td>
             </tr>
         }
     </tbody>

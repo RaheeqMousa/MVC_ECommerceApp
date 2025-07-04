@@ -7,7 +7,7 @@
 
 
 <div class="card card-primary card-outline mb-4">
-    <form action="/admin/categories/create" method="post">
+    <form asp-area="Admin" asp-controller="Categories" asp-action="Create" method="post" >
         <div class="card-body">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
@@ -22,14 +22,7 @@
 
 
 
-@section script{
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
-<script href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></script>
-<script>
-    toastr.success('Have fun storming the castle!', 'Miracle Max Says');
-</script>
-
-}
